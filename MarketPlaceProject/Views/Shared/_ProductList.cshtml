@@ -1,0 +1,24 @@
+﻿@model List<MarketPlaceProject.ViewModels.ProductVM>
+
+@foreach (var product in Model)
+{
+    <div class="search-product-column">
+        <img src="~/Content/icons/ProductImages/@(product.ProductID).jpg" alt="@product.ProductName" class="product-image">
+        <h3>
+            <a href="@Url.Action("KeySpecs", "Product", new { productId = product.ProductID })">
+                @product.ProductName
+            </a>
+        </h3>
+        <input type="checkbox" value="@product.ProductID" class="product-checkbox">
+        @foreach (var attribute in product.SubCategory.Attributes)
+        {
+            var detail = attribute.AttributeDetails.FirstOrDefault(ad => ad.ProductID == product.ProductID).Details;
+            <div class="search-attribute-row">
+                <div class="search-attribute-name">
+                    @attribute.AttributeName
+                </div>
+                @detail
+            </div>
+        }
+    </div>
+}

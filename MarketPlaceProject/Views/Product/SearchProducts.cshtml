@@ -1,0 +1,54 @@
+﻿@model MarketPlaceProject.ViewModels.SearchVM
+
+@{
+    ViewBag.Title = "Search Product";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css?version=1" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="@Url.Action("MainPage", "Product")">
+                <img src="~/Content/icons/login.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-search-container">
+            @Html.Partial("_SearchBar", Model.Categories)
+        </div>
+    </div>
+
+    @if (TempData["compareFailed"] != null)
+    {
+        <div id="compare-failed">
+            @TempData["compareFailed"]
+        </div>
+    }
+
+    <div class="container">
+        @Html.Partial("_FilterBar", Model)
+
+        <div class="search-product-table">
+            @Html.Partial("_ProductList", Model.Products)
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var messageDiv = $('#compare-failed');
+            if (messageDiv.text().trim().length > 0) {
+                messageDiv.show();
+                setTimeout(function () {
+                    messageDiv.fadeOut('slow');
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #114488, #fff);
+    height: 100vh;
+/*    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;*/
+
+}
+
+.Partial-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.header-2 {
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #114488, #fff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}*/
+
+.signout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+   
+.signout-button:hover {     
+    background-color: #0056b3;
+}
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    background: #fff;
+}
+
+.header-container {
+    background: linear-gradient(to bottom, #114488, #fff);
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.header-search-container {
+    width: 65%;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Search Page */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+#searchButton {
+    background-image: url('/Content/icons/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Remove border if you want */
+    width: 45px; /* Adjust as needed */
+    height: 45px; /* Adjust as needed */
+    text-align: center; /* Center text */
+    padding: -10px;
+    /*background-color: #2596be;*/
+    color: white;
+    border-radius: 5px;
+}
+
+#categorySelect {
+    background-color: #0080d4;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 15%;
+}
+
+#subs {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 85%;
+}
+
+option {
+    background-color: white !important;
+}
+
+.search-product-table {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-product-column {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+    .search-product-column h3 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+.product-checkbox {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.search-attribute-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-attribute-name {
+    font-weight: bold;
+}
+
+.filter-panel {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .filter-panel h2 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* Add some gap between buttons */
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    margin-bottom: 20px;
+}
+
+    .filter-item label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .filter-item input[type="range"] {
+        width: 100%;
+    }
+
+    .filter-item select {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+#applyFilters,
+#resetFilters {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#resetFilters {
+    background-color: #dc3545;
+}
+
+#applyFilters {
+    margin-right: 10px;
+}
+
+#compareButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+#compare-failed {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+    font-size: 24px;
+}
+
+/* Compare Page */
+.compare-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Table */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem; /* Use relative units for padding */
+    font-size: 1rem; /* Default font size using relative units */
+}
+
+th {
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+}
+
+thead th {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+table img {
+    max-width: 100%; /* Image resizes based on table cell width */
+    height: auto;
+}
+
+.compare-container th,
+.compare-container td {
+    border-right: 1px solid #ddd;
+}
+
+    .compare-container th:last-child,
+    .compare-container td:last-child {
+        border-right: none;
+    }
+
+.compare-container thead th {
+    border-top: 1px solid #ccc;
+}
+
+.compare-container tbody tr td:first-child {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.compare-container tbody tr td {
+    text-align: center;
+}
+
+.compare-container thead th:first-child {
+    width: 15%; /* Use percentage for width */
+    text-align: left;
+}
+
+/* Media Queries */
+/* For medium screens (1024px and below) */
+@media (max-width: 1024px) {
+    .compare-container th, .compare-container td {
+        padding: 0.75rem; /* Adjust padding */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* For small screens (768px and below) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .compare-container {
+        flex-direction: column;
+    }
+
+        .compare-container th,
+        .compare-container td {
+            padding: 0.5rem; /* Adjust padding */
+            font-size: 0.8rem; /* Adjust font size */
+        }
+}
+
+/* For very small screens (480px and below) */
+@media (max-width: 480px) {
+    .compare-container th, .compare-container td {
+        padding: 0.25rem; /* Adjust padding */
+        font-size: 0.7rem; /* Adjust font size */
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* Product */
+.product-image {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: black;
+    font-size: 26px; /* Slightly larger font size for better emphasis */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600; /* Slightly heavier font weight for emphasis */
+}
+
+.keyspec-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* More rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for a subtle 3D effect */
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    .keyspec-details ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .keyspec-details li {
+        border-bottom: 1px solid #eee;
+        padding: 15px 0; /* Increased padding for better spacing */
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .keyspec-details li:last-child {
+            border-bottom: none;
+        }
+
+    .keyspec-details strong {
+        color: #333;
+        font-weight: 600; /* Heavier font weight for stronger emphasis */
+    }
+
+    .keyspec-details span {
+        color: #555; /* Darker color for better readability */
+    }
+
+@media (max-width: 768px) {
+    .keyspec-details {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px; /* Slightly smaller font size on smaller screens */
+    }
+}
